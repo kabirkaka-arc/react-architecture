@@ -1,0 +1,75 @@
+$main-color: rgba(50, 0, 116, 0.85);
+$primary-color: rgba(50, 0, 116, 0.85);
+$secondary-color: #3c0f71;
+$text-color: #1a1d1c;
+$background-color: #f7f7f7;
+$sidebar-color: #4a4a4a;
+$primary-heading-color: #1a1d1c;
+$sidebar-background-color: #2c2c2c;
+$white-color: #ffffff;
+$dark-gray-color: #4a4a4a;
+
+$primary-font-reg: "inter-regular";
+$primary-font-med: "inter-medium";
+$primary-font-bold: "inter-bold";
+$secondary-font-reg: "segoeui-regular";
+$secondary-font-bold: "segoeui-bold";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $primary-font-reg;
+  background-color: $background-color;
+}
+
+@mixin scrollbar($thumb-color, $track-color) {
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $thumb-color;
+    border-radius: 6px;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background-color: $track-color;
+    border-radius: 12px;
+  }
+}
+
+body {
+  @include scrollbar($text-color, $dark-gray-color);
+}
+
+@font-face {
+  font-family: "inter-regular";
+  src: url("./assets/fonts/Inter/static/Inter_18pt-Regular.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "inter-medium";
+  src: url("./assets/fonts/Inter/static/Inter_18pt-Medium.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "inter-bold";
+  src: url("./assets/fonts/Inter/static/Inter_18pt-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "segoeui-regular";
+  src: url("./assets/fonts/segoe-ui-this/segoeuithis.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "segoeui-bold";
+  src: url("./assets/fonts/segoe-ui-this/segoeuithibd.ttf") format("truetype");
+}

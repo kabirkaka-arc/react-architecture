@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".", // This allows relative imports based on the project root.
+    "paths": {
+      "@/*": ["src/*"], // Maps @ to the src folder
+      "@components/*": ["src/components/*"], // Maps @components to the components folder
+      "@utils/*": ["src/utils/*"] // Maps @utils to the utils folder
+    }
+  },
+  "files": [],
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}
