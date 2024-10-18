@@ -85,7 +85,6 @@ const FilterDrawer: React.FC<IFilterDrawerProps> = ({
             style={{ marginLeft: "10px" }}
             onClick={discardHandler}
             htmlType="button"
-            type="danger"
           >
             Discard
           </Button>

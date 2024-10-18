@@ -1,5 +1,7 @@
+@use "../../../global.scss" as *;
+
 .customBtn {
-  background-color: #00549f;
+  background-color: $main-color;
   color: white;
   /* height: 40px; */
   display: flex;
@@ -10,10 +12,10 @@
 
 .customBtnOutline {
   background-color: white;
-  color: #00549f;
+  color: $primary-color;
   /* height: 40px; */
   display: flex;
   align-items: center;
-  border-color: 1px solid #00549f;
+  border-color: 1px solid $primary-color;
   gap: 5px;
 }
