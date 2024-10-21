@@ -20,9 +20,33 @@ $secondary-font-bold: "segoeui-bold";
   padding: 0;
 }
 
+.body-container {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
 body {
   font-family: $primary-font-reg;
   background-color: $background-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin-bottom: 0 !important;
 }
 
 @mixin scrollbar($thumb-color, $track-color) {

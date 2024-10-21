@@ -8,34 +8,36 @@ function AppRoutes() {
   return (
     <HashRouter>
       <NavBar />
-      <Routes>
-        {appRoutes?.map(
-          ({
-            route,
-            module,
-            isParent,
-            privacyType,
-            isPermitted,
-            element: Element,
-          }) => (
-            <Route
-              key={route}
-              path={`${route}${isParent ? "/*" : ""}`}
-              element={
-                <ProtectedRoute
-                  privacyType={privacyType}
-                  isPermitted={isPermitted}
-                  module={module}
-                >
-                  <Element />
-                </ProtectedRoute>
-              }
-            />
-          )
-        )}
-        <Route path="/not-found" element={<NotFound />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div className="body-container">
+        <Routes>
+          {appRoutes?.map(
+            ({
+              route,
+              module,
+              isParent,
+              privacyType,
+              isPermitted,
+              element: Element,
+            }) => (
+              <Route
+                key={route}
+                path={`${route}${isParent ? "/*" : ""}`}
+                element={
+                  <ProtectedRoute
+                    privacyType={privacyType}
+                    isPermitted={isPermitted}
+                    module={module}
+                  >
+                    <Element />
+                  </ProtectedRoute>
+                }
+              />
+            )
+          )}
+          <Route path="/not-found" element={<NotFound />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
     </HashRouter>
   );
 }

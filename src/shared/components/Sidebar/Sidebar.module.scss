@@ -1,0 +1,69 @@
+@use "../../../global.scss" as *;
+
+.container {
+  position: relative;
+}
+
+.drawer > div:first-child {
+  background: $primary-color !important;
+  padding: 20px 10px;
+}
+
+.drawer > div:last-child {
+  padding: 0;
+}
+
+.drawer {
+  .ant-drawer-body {
+    padding: 0;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.menuBtn {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  .navLink {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #333;
+
+    h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    &:hover {
+      color: #1890ff;
+    }
+  }
+}
+
+.logoutContainer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding: 0 20px;
+
+  .navLink {
+    display: flex;
+    align-items: center;
+    color: #ff4d4f;
+  }
+}

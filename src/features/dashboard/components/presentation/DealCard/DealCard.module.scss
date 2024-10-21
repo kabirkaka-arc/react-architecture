@@ -1,0 +1,89 @@
+@use "../../../../../global.scss" as *;
+
+.card {
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0px 4px 100px 0px rgba(0, 0, 0, 0.04);
+  flex-shrink: 0;
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+}
+
+.cardHeader {
+  h1 {
+    color: $primary-color;
+    font-family: $primary-font-bold;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  span {
+    flex-shrink: 0;
+    border-radius: 4px;
+    padding: 5px;
+    background: rgba(80, 0, 159, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  span svg {
+    color: $primary-color;
+    font-size: 18px;
+  }
+}
+
+.cardContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px 24px;
+
+  div {
+    h2 {
+      color: #1a1d1c;
+      opacity: 0.48;
+      font-family: $primary-font-med;
+      font-size: 15px;
+      font-weight: 500;
+    }
+    p {
+      color: #1a1d1c;
+      font-family: $primary-font-med;
+      font-size: 35px;
+      font-weight: 600;
+
+      span {
+        opacity: 0.8;
+        color: #1a1d1c;
+        font-family: $primary-font-reg;
+        font-size: 13px;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.growth {
+  position: absolute;
+  bottom: 1rem;
+  right: 1.5rem;
+  font-family: $primary-font-reg;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.positive {
+  color: #00a407;
+}
+
+.negative {
+  color: #a40000;
+}
